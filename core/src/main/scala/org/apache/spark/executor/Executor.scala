@@ -366,7 +366,7 @@ private[spark] class Executor(
         }
       } catch {
         case NonFatal(e) =>
-          logWarning("Unable to stop heartbeater", e)
+          logWarning("Unable to stop heartbeater ", e)
       }
       ShuffleBlockPusher.stop()
       if (threadPool != null) {
